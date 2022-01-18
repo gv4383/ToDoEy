@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		B9167F002796793D001DD266 /* ToDoEyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9167EFF2796793D001DD266 /* ToDoEyApp.swift */; };
-		B9167F022796793D001DD266 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9167F012796793D001DD266 /* ContentView.swift */; };
+		B9167F022796793D001DD266 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9167F012796793D001DD266 /* ListView.swift */; };
 		B9167F042796793F001DD266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9167F032796793F001DD266 /* Assets.xcassets */; };
 		B9167F072796793F001DD266 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9167F062796793F001DD266 /* Preview Assets.xcassets */; };
+		B9167F0F27967E12001DD266 /* AddTaskButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9167F0E27967E12001DD266 /* AddTaskButtonView.swift */; };
+		B9167F12279680AB001DD266 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9167F11279680AB001DD266 /* Color-Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B9167EFC2796793D001DD266 /* ToDoEy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoEy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9167EFF2796793D001DD266 /* ToDoEyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoEyApp.swift; sourceTree = "<group>"; };
-		B9167F012796793D001DD266 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B9167F012796793D001DD266 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		B9167F032796793F001DD266 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9167F062796793F001DD266 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9167F0E27967E12001DD266 /* AddTaskButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskButtonView.swift; sourceTree = "<group>"; };
+		B9167F11279680AB001DD266 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,9 @@
 		B9167EFE2796793D001DD266 /* ToDoEy */ = {
 			isa = PBXGroup;
 			children = (
+				B9167F0D279679DA001DD266 /* Views */,
+				B9167F1027968077001DD266 /* Utils */,
 				B9167EFF2796793D001DD266 /* ToDoEyApp.swift */,
-				B9167F012796793D001DD266 /* ContentView.swift */,
 				B9167F032796793F001DD266 /* Assets.xcassets */,
 				B9167F052796793F001DD266 /* Preview Content */,
 			);
@@ -65,6 +70,23 @@
 				B9167F062796793F001DD266 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9167F0D279679DA001DD266 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9167F0E27967E12001DD266 /* AddTaskButtonView.swift */,
+				B9167F012796793D001DD266 /* ListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9167F1027968077001DD266 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B9167F11279680AB001DD266 /* Color-Theme.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9167F022796793D001DD266 /* ContentView.swift in Sources */,
+				B9167F0F27967E12001DD266 /* AddTaskButtonView.swift in Sources */,
+				B9167F022796793D001DD266 /* ListView.swift in Sources */,
 				B9167F002796793D001DD266 /* ToDoEyApp.swift in Sources */,
+				B9167F12279680AB001DD266 /* Color-Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
