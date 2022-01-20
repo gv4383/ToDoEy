@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ListView: View {
     
+    @ObservedObject private var viewModel = ListViewModel()
+    
     @State private var testTasks = [
         Task(name: "Test Task 1"),
         Task(name: "Test Task 2"),
@@ -38,12 +40,15 @@ struct ListView: View {
                     AddTaskButtonView()
                         .padding()
                         .onTapGesture {
-                            testTasks.append(Task(name: "Another Test Task"))
+                            viewModel.isShowing = true
                         }
                 }
             }
             .navigationTitle("ToDoEy")
             .background(.lightPurple)
+            .sheet(isPresented: $viewModel.isShowing) {
+                AddTaskView(isShowing: $viewModel.isShowing)
+            }
         }
     }
 }

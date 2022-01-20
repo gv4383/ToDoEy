@@ -22,7 +22,7 @@ struct AddTaskButtonView: View {
     }
 }
 
-struct AddTaskView_Previews: PreviewProvider {
+struct AddTaskButtonView_Previews: PreviewProvider {
     static var previews: some View {
         AddTaskButtonView()
     }

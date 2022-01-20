@@ -15,6 +15,9 @@
 		B9167F12279680AB001DD266 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9167F11279680AB001DD266 /* Color-Theme.swift */; };
 		B91847392797D3CA00C41247 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91847382797D3CA00C41247 /* TaskModel.swift */; };
 		B918473B2797D52500C41247 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918473A2797D52500C41247 /* TaskView.swift */; };
+		B918473E27990A9700C41247 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918473D27990A9700C41247 /* AddTaskView.swift */; };
+		B918474127990BB300C41247 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918474027990BB300C41247 /* AddTaskViewModel.swift */; };
+		B91847432799318600C41247 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91847422799318600C41247 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		B9167F11279680AB001DD266 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		B91847382797D3CA00C41247 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		B918473A2797D52500C41247 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		B918473D27990A9700C41247 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		B918474027990BB300C41247 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
+		B91847422799318600C41247 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			children = (
 				B91847372797D3B200C41247 /* Models */,
 				B9167F0D279679DA001DD266 /* Views */,
+				B918473F27990B7D00C41247 /* ViewModels */,
 				B9167F1027968077001DD266 /* Utils */,
 				B9167EFF2796793D001DD266 /* ToDoEyApp.swift */,
 				B9167F032796793F001DD266 /* Assets.xcassets */,
@@ -81,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				B9167F0E27967E12001DD266 /* AddTaskButtonView.swift */,
+				B918473D27990A9700C41247 /* AddTaskView.swift */,
 				B9167F012796793D001DD266 /* ListView.swift */,
 				B918473A2797D52500C41247 /* TaskView.swift */,
 			);
@@ -101,6 +109,15 @@
 				B91847382797D3CA00C41247 /* TaskModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B918473F27990B7D00C41247 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B918474027990BB300C41247 /* AddTaskViewModel.swift */,
+				B91847422799318600C41247 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +191,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9167F0F27967E12001DD266 /* AddTaskButtonView.swift in Sources */,
+				B918474127990BB300C41247 /* AddTaskViewModel.swift in Sources */,
+				B918473E27990A9700C41247 /* AddTaskView.swift in Sources */,
 				B9167F022796793D001DD266 /* ListView.swift in Sources */,
 				B91847392797D3CA00C41247 /* TaskModel.swift in Sources */,
+				B91847432799318600C41247 /* ListViewModel.swift in Sources */,
 				B918473B2797D52500C41247 /* TaskView.swift in Sources */,
 				B9167F002796793D001DD266 /* ToDoEyApp.swift in Sources */,
 				B9167F12279680AB001DD266 /* Color-Theme.swift in Sources */,
