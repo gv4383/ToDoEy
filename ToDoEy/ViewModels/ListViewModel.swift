@@ -10,4 +10,9 @@ import Foundation
 final class ListViewModel: ObservableObject {
     
     @Published var isShowing = false
+    @Published var testTasks = [
+        Task(name: "Test Task 1"),
+        Task(name: "Test Task 2"),
+        Task(name: "Test Task 3")
+    ]
 }

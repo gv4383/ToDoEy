@@ -13,11 +13,12 @@
 		B9167F072796793F001DD266 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9167F062796793F001DD266 /* Preview Assets.xcassets */; };
 		B9167F0F27967E12001DD266 /* AddTaskButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9167F0E27967E12001DD266 /* AddTaskButtonView.swift */; };
 		B9167F12279680AB001DD266 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9167F11279680AB001DD266 /* Color-Theme.swift */; };
-		B91847392797D3CA00C41247 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91847382797D3CA00C41247 /* TaskModel.swift */; };
+		B91847392797D3CA00C41247 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91847382797D3CA00C41247 /* Task.swift */; };
 		B918473B2797D52500C41247 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918473A2797D52500C41247 /* TaskView.swift */; };
 		B918473E27990A9700C41247 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918473D27990A9700C41247 /* AddTaskView.swift */; };
 		B918474127990BB300C41247 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918474027990BB300C41247 /* AddTaskViewModel.swift */; };
 		B91847432799318600C41247 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91847422799318600C41247 /* ListViewModel.swift */; };
+		B9A7ED5E279A818D00167AAC /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7ED5D279A818D00167AAC /* Tasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +29,12 @@
 		B9167F062796793F001DD266 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9167F0E27967E12001DD266 /* AddTaskButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskButtonView.swift; sourceTree = "<group>"; };
 		B9167F11279680AB001DD266 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
-		B91847382797D3CA00C41247 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		B91847382797D3CA00C41247 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B918473A2797D52500C41247 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		B918473D27990A9700C41247 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		B918474027990BB300C41247 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
 		B91847422799318600C41247 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		B9A7ED5D279A818D00167AAC /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,8 @@
 		B91847372797D3B200C41247 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B91847382797D3CA00C41247 /* TaskModel.swift */,
+				B91847382797D3CA00C41247 /* Task.swift */,
+				B9A7ED5D279A818D00167AAC /* Tasks.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,10 +197,11 @@
 				B918474127990BB300C41247 /* AddTaskViewModel.swift in Sources */,
 				B918473E27990A9700C41247 /* AddTaskView.swift in Sources */,
 				B9167F022796793D001DD266 /* ListView.swift in Sources */,
-				B91847392797D3CA00C41247 /* TaskModel.swift in Sources */,
+				B91847392797D3CA00C41247 /* Task.swift in Sources */,
 				B91847432799318600C41247 /* ListViewModel.swift in Sources */,
 				B918473B2797D52500C41247 /* TaskView.swift in Sources */,
 				B9167F002796793D001DD266 /* ToDoEyApp.swift in Sources */,
+				B9A7ED5E279A818D00167AAC /* Tasks.swift in Sources */,
 				B9167F12279680AB001DD266 /* Color-Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

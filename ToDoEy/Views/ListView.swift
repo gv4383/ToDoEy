@@ -11,17 +11,11 @@ struct ListView: View {
     
     @ObservedObject private var viewModel = ListViewModel()
     
-    @State private var testTasks = [
-        Task(name: "Test Task 1"),
-        Task(name: "Test Task 2"),
-        Task(name: "Test Task 3")
-    ]
-    
     var body: some View {
         NavigationView {
             VStack {
                 VStack {
-                    ForEach(testTasks) { task in
+                    ForEach(viewModel.testTasks) { task in
                         HStack {
                             TaskView(name: task.name)
                             
@@ -47,7 +41,7 @@ struct ListView: View {
             .navigationTitle("ToDoEy")
             .background(.lightPurple)
             .sheet(isPresented: $viewModel.isShowing) {
-                AddTaskView(isShowing: $viewModel.isShowing)
+                AddTaskView(isShowing: $viewModel.isShowing, tasks: $viewModel.testTasks)
             }
         }
     }
