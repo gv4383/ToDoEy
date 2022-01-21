@@ -14,8 +14,9 @@ struct AddTaskView: View {
     @ObservedObject private var viewModel = AddTaskViewModel()
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("New task")
+                .font(.title).bold()
             
             TextField("Enter your new task here", text: $viewModel.userInput)
                 .textFieldStyle(.roundedBorder)
@@ -23,8 +24,16 @@ struct AddTaskView: View {
             Button("Add task") {
                 isShowing = false
             }
+            .padding()
+            .foregroundColor(.black)
+            .background(.lightPink)
+            .cornerRadius(10)
+            .padding(.vertical)
+            
+            Spacer()
         }
         .padding()
+        .background(.lightBlue)
     }
 }
 
