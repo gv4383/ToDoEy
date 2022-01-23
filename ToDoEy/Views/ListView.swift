@@ -14,17 +14,20 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                VStack {
+                List {
                     ForEach(viewModel.testTasks) { task in
                         HStack {
                             TaskView(name: task.name)
-                            
+
                             Spacer()
                         }
                     }
+                    .onDelete(perform: viewModel.removeTask)
                 }
-                .padding(.horizontal)
-                .frame(maxWidth: .infinity)
+                .onAppear {
+                    UITableView.appearance().backgroundColor = UIColor.clear
+                    UITableViewCell.appearance().backgroundColor = UIColor.clear
+                }
                 
                 Spacer()
                 

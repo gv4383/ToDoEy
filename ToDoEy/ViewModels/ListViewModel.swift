@@ -15,4 +15,8 @@ final class ListViewModel: ObservableObject {
         Task(name: "Test Task 2"),
         Task(name: "Test Task 3")
     ]
+    
+    func removeTask(at offsets: IndexSet) {
+        testTasks.remove(atOffsets: offsets)
+    }
 }
