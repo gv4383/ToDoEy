@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskView: View {
     
-    @ObservedObject private var viewModel = TaskViewModel()
+    @StateObject private var viewModel = TaskViewModel()
     
     let name: String
     
