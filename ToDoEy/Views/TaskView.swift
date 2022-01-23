@@ -9,10 +9,22 @@ import SwiftUI
 
 struct TaskView: View {
     
+    @ObservedObject private var viewModel = TaskViewModel()
+    
     let name: String
     
     var body: some View {
-        Text(name)
+        HStack {
+            ZStack {
+                Image(systemName: viewModel.checkSymbol)
+            }
+            .onTapGesture {
+                viewModel.isChecked = !viewModel.isChecked
+            }
+            
+            Text(name)
+                .strikethrough(viewModel.isChecked)
+        }
     }
 }
 

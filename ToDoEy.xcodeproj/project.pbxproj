@@ -19,6 +19,7 @@
 		B918474127990BB300C41247 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918474027990BB300C41247 /* AddTaskViewModel.swift */; };
 		B91847432799318600C41247 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91847422799318600C41247 /* ListViewModel.swift */; };
 		B9A7ED5E279A818D00167AAC /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7ED5D279A818D00167AAC /* Tasks.swift */; };
+		B9A7ED60279DFD5900167AAC /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7ED5F279DFD5900167AAC /* TaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B918474027990BB300C41247 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
 		B91847422799318600C41247 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		B9A7ED5D279A818D00167AAC /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		B9A7ED5F279DFD5900167AAC /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				B918474027990BB300C41247 /* AddTaskViewModel.swift */,
 				B91847422799318600C41247 /* ListViewModel.swift */,
+				B9A7ED5F279DFD5900167AAC /* TaskViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9A7ED60279DFD5900167AAC /* TaskViewModel.swift in Sources */,
 				B9167F0F27967E12001DD266 /* AddTaskButtonView.swift in Sources */,
 				B918474127990BB300C41247 /* AddTaskViewModel.swift in Sources */,
 				B918473E27990A9700C41247 /* AddTaskView.swift in Sources */,

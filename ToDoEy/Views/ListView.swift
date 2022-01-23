@@ -16,11 +16,7 @@ struct ListView: View {
             VStack {
                 List {
                     ForEach(viewModel.testTasks) { task in
-                        HStack {
-                            TaskView(name: task.name)
-
-                            Spacer()
-                        }
+                        TaskView(name: task.name)
                     }
                     .onDelete(perform: viewModel.removeTask)
                 }
