@@ -16,15 +16,10 @@ struct ListView: View {
         NavigationView {
             VStack {
                 List {
-//                    ForEach(viewModel.testTasks) { task in
-//                        TaskView(name: task.name)
-//                    }
-//                    .onDelete(perform: viewModel.removeTask)
-                    
                     ForEach(tasks.items) { task in
                         TaskView(name: task.name)
                     }
-//                    .onDelete(perform: viewModel.removeTask)
+                    .onDelete(perform: tasks.removeTask)
                 }
                 .onAppear {
                     UITableView.appearance().backgroundColor = UIColor.clear

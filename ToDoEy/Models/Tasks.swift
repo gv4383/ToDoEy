@@ -27,4 +27,8 @@ class Tasks: ObservableObject {
             items = []
         }
     }
+    
+    func removeTask(at offsets: IndexSet) {
+        items.remove(atOffsets: offsets)
+    }
 }

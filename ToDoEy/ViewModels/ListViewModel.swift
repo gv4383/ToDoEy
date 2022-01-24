@@ -10,8 +10,4 @@ import Foundation
 final class ListViewModel: ObservableObject {
     
     @Published var isShowing = false
-    
-//    func removeTask(at offsets: IndexSet) {
-//        testTasks.remove(atOffsets: offsets)
-//    }
 }
