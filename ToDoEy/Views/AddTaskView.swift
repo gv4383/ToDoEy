@@ -23,7 +23,7 @@ struct AddTaskView: View {
                 .textFieldStyle(.roundedBorder)
             
             Button("Add task") {
-                tasks.append(Task(name: viewModel.userInput))
+                tasks.append(Task(name: viewModel.userInput, isChecked: false))
                 isShowing = false
             }
             .padding()

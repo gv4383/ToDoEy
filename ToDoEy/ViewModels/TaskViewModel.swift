@@ -9,10 +9,8 @@ import Foundation
 
 final class TaskViewModel: ObservableObject {
     
-    @Published var isChecked = false
-    
-    var checkSymbol: String {
-        isChecked
+    func getCheckSymbol(isChecked: Bool) -> String {
+        return isChecked
             ? "checkmark.circle"
             : "circle"
     }

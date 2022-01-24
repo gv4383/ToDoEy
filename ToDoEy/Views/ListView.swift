@@ -17,7 +17,7 @@ struct ListView: View {
             VStack {
                 List {
                     ForEach(tasks.items) { task in
-                        TaskView(name: task.name)
+                        TaskView(id: task.id, name: task.name, isChecked: task.isChecked)
                     }
                     .onDelete(perform: tasks.removeTask)
                 }
@@ -38,6 +38,7 @@ struct ListView: View {
                         }
                 }
             }
+            .environmentObject(tasks)
             .navigationTitle("ToDoEy")
             .background(.lightPurple)
             .sheet(isPresented: $viewModel.isShowing) {
