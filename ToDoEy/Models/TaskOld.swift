@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Task: Identifiable, Codable {
+struct TaskOld: Identifiable, Codable {
     var id = UUID()
     let name: String
     var isChecked: Bool

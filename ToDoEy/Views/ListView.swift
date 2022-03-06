@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct ListView: View {
-    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var tasks: FetchedResults<Task>
     @ObservedObject private var viewModel = ListViewModel()
-    @StateObject private var tasks = Tasks()
+//    @StateObject private var tasks = Tasks()
+    
     
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(tasks.items) { task in
-                        TaskView(id: task.id, name: task.name, isChecked: task.isChecked)
+                    ForEach(tasks) { task in
+                        TaskView(id: task.id ?? UUID(), name: task.name ?? "Unknown", isChecked: task.isChecked)
                     }
-                    .onDelete(perform: tasks.removeTask)
+//                    .onDelete(perform: tasks.removeTask)
                 }
                 .onAppear {
                     UITableView.appearance().backgroundColor = UIColor.clear
@@ -38,11 +40,11 @@ struct ListView: View {
                         }
                 }
             }
-            .environmentObject(tasks)
+//            .environmentObject(tasks)
             .navigationTitle("ToDoEy")
             .background(.lightPurple)
             .sheet(isPresented: $viewModel.isShowing) {
-                AddTaskView(isShowing: $viewModel.isShowing, tasks: $tasks.items)
+                AddTaskView(isShowing: $viewModel.isShowing)
             }
         }
     }

@@ -9,7 +9,7 @@ import Foundation
 
 class Tasks: ObservableObject {
     
-    @Published var items = [Task]() {
+    @Published var items = [TaskOld]() {
         didSet {
             if let encoded = try? JSONEncoder().encode(items) {
                 UserDefaults.standard.set(encoded, forKey: "Tasks")
@@ -19,7 +19,7 @@ class Tasks: ObservableObject {
     
     init() {
         if let savedItems = UserDefaults.standard.data(forKey: "Tasks") {
-            if let decodedItems = try? JSONDecoder().decode([Task].self, from: savedItems) {
+            if let decodedItems = try? JSONDecoder().decode([TaskOld].self, from: savedItems) {
                 items = decodedItems
                 return
             }

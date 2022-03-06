@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct AddTaskView: View {
-    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var tasks: FetchedResults<Task>
     @ObservedObject private var viewModel = AddTaskViewModel()
     
     @Binding var isShowing: Bool
-    @Binding var tasks: [Task]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,7 +23,13 @@ struct AddTaskView: View {
                 .textFieldStyle(.roundedBorder)
             
             Button("Add task") {
-                tasks.append(Task(name: viewModel.userInput, isChecked: false))
+                let newTask = Task(context: moc)
+                newTask.id = UUID()
+                newTask.name = viewModel.userInput
+                newTask.isChecked = false
+                
+                try? moc.save()
+                
                 isShowing = false
             }
             .padding()
@@ -41,6 +47,6 @@ struct AddTaskView: View {
 
 struct AddTaskView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTaskView(isShowing: .constant(true), tasks: .constant([]))
+        AddTaskView(isShowing: .constant(true))
     }
 }
