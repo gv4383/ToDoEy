@@ -8,31 +8,34 @@
 import SwiftUI
 
 struct TaskView: View {
-//    @Environment(\.managedObjectContext) var moc
-//    @FetchRequest(sortDescriptors: []) var tasks: FetchedResults<Task>
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var tasks: FetchedResults<Task>
     @StateObject private var viewModel = TaskViewModel()
     
     let id: UUID
     let name: String
     var isChecked: Bool
     
-//    var selectedTaskIndex: Int {
-//        tasks.firstIndex { task in
-//            task.id == id
-//        }!
-//    }
+    var selectedTaskIndex: Int {
+        tasks.firstIndex { task in
+            task.id == id
+        }!
+    }
     
     var body: some View {
         HStack {
             ZStack {
                 Image(systemName: viewModel.getCheckSymbol(isChecked: isChecked))
             }
-//            .onTapGesture {
-//                tasks.items[selectedTaskIndex].isChecked = !isChecked
-//            }
+            .onTapGesture {
+                let task = tasks[selectedTaskIndex]
+                task.isChecked = !isChecked
+                
+                try? moc.save()
+            }
             
             Text(name)
-//                .strikethrough(isChecked)
+                .strikethrough(isChecked)
         }
     }
 }

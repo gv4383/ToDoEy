@@ -21,7 +21,7 @@ struct ListView: View {
                     ForEach(tasks) { task in
                         TaskView(id: task.id ?? UUID(), name: task.name ?? "Unknown", isChecked: task.isChecked)
                     }
-//                    .onDelete(perform: tasks.removeTask)
+                    .onDelete(perform: removeTask)
                 }
                 .onAppear {
                     UITableView.appearance().backgroundColor = UIColor.clear
@@ -47,6 +47,15 @@ struct ListView: View {
                 AddTaskView(isShowing: $viewModel.isShowing)
             }
         }
+    }
+    
+    func removeTask(at offsets: IndexSet) {
+        for offset in offsets {
+            let task = tasks[offset]
+            moc.delete(task)
+        }
+        
+        try? moc.save()
     }
 }
 
