@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListView: View {
-    @ObservedObject private var viewModel = ListViewModel()
+    @StateObject private var viewModel = ListViewModel()
     
     var body: some View {
         NavigationView {

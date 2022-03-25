@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AddTaskButtonView: View {
-    
     var body: some View {
         ZStack {
             Circle()

@@ -25,7 +25,8 @@ final class TaskStorage: NSObject, ObservableObject {
             fetchRequest: fetchRequest,
             managedObjectContext: context,
             sectionNameKeyPath: nil,
-            cacheName: nil)
+            cacheName: nil
+        )
         
         super.init()
         

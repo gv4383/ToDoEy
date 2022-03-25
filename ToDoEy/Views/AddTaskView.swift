@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddTaskView: View {
-    @ObservedObject private var viewModel = AddTaskViewModel()
+    @StateObject private var viewModel = AddTaskViewModel()
     
     @Binding var isShowing: Bool
     
