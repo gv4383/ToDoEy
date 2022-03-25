@@ -22,6 +22,7 @@
 		B91F389327D4788000B0E2A1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F389227D4788000B0E2A1 /* DataController.swift */; };
 		B9A7ED5E279A818D00167AAC /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7ED5D279A818D00167AAC /* Tasks.swift */; };
 		B9A7ED60279DFD5900167AAC /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7ED5F279DFD5900167AAC /* TaskViewModel.swift */; };
+		B9DCFEF727E80107006C9D0A /* TaskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCFEF627E80107006C9D0A /* TaskStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B91F389227D4788000B0E2A1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		B9A7ED5D279A818D00167AAC /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		B9A7ED5F279DFD5900167AAC /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		B9DCFEF627E80107006C9D0A /* TaskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		B9167EFE2796793D001DD266 /* ToDoEy */ = {
 			isa = PBXGroup;
 			children = (
+				B9DCFEF527E800D0006C9D0A /* Managers */,
 				B91847372797D3B200C41247 /* Models */,
 				B9167F0D279679DA001DD266 /* Views */,
 				B918473F27990B7D00C41247 /* ViewModels */,
@@ -83,7 +86,6 @@
 				B9167F032796793F001DD266 /* Assets.xcassets */,
 				B9167F052796793F001DD266 /* Preview Content */,
 				B91F388E27D4779D00B0E2A1 /* ToDoEy.xcdatamodeld */,
-				B91F389227D4788000B0E2A1 /* DataController.swift */,
 			);
 			path = ToDoEy;
 			sourceTree = "<group>";
@@ -132,6 +134,15 @@
 				B9A7ED5F279DFD5900167AAC /* TaskViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B9DCFEF527E800D0006C9D0A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B91F389227D4788000B0E2A1 /* DataController.swift */,
+				B9DCFEF627E80107006C9D0A /* TaskStorage.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9DCFEF727E80107006C9D0A /* TaskStorage.swift in Sources */,
 				B9A7ED60279DFD5900167AAC /* TaskViewModel.swift in Sources */,
 				B9167F0F27967E12001DD266 /* AddTaskButtonView.swift in Sources */,
 				B918474127990BB300C41247 /* AddTaskViewModel.swift in Sources */,

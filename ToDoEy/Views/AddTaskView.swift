@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct AddTaskView: View {
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var tasks: FetchedResults<Task>
     @ObservedObject private var viewModel = AddTaskViewModel()
     
     @Binding var isShowing: Bool
@@ -23,13 +21,7 @@ struct AddTaskView: View {
                 .textFieldStyle(.roundedBorder)
             
             Button("Add task") {
-                let newTask = Task(context: moc)
-                newTask.id = UUID()
-                newTask.name = viewModel.userInput
-                newTask.isChecked = false
-                
-                try? moc.save()
-                
+                viewModel.addNewTask()
                 isShowing = false
             }
             .padding()

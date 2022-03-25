@@ -9,9 +9,11 @@ import CoreData
 import Foundation
 
 class DataController: ObservableObject {
-    let container = NSPersistentContainer(name: "ToDoEy")
+    let container: NSPersistentContainer
+    static let shared = DataController()
     
-    init() {
+    private init() {
+        container = NSPersistentContainer(name: "ToDoEy")
         container.loadPersistentStores { description, error in
             if let error = error {
                 print("Core Data failed to load: \(error.localizedDescription)")
